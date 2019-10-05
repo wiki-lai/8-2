@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<!-- namespace命名空间  用来区分不同的mapper -->
+<mapper namespace="test">
+
+
+<!-- 添加 -->
+<insert id="addUser" parameterType="com.ali.domain.User">
+		insert into xc(id,name,age,phone) values(#{id},#{name},#{age},#{phone})
+</insert>
+
+<!-- 修改 -->
+<update id="updUserById" parameterType="com.ali.domain.User">
+		update xc set name=#{name},age = #{age},phone = #{phone} where id=#{id}
+</update>
+
+
+<!-- 删除 -->
+<delete id="delUserById" parameterType="com.ali.domain.User">
+		delete from xc where id = #{id}
+</delete>
+
+
+<!-- 选取 -->
+    <select id="selUserById" parameterType="int" resultType="com.ali.domain.User">
+		select * from xc where id = #{id}
+	</select>
+	
+
+	
+
+
+<!-- <selectKey keyProperty="id" order="AFTER" resultType="int"> -->
+<!-- 	select last_insert_id() -->
+<!-- </selectKey> -->
+
+
+
+
+
+
+
+
+
+
+
+</mapper>
