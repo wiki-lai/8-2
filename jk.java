@@ -1,6 +1,6 @@
 
 public class jk {
 
-	public	int;
+// xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 //	hot_fix
 }
